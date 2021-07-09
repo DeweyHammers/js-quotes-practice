@@ -23,10 +23,10 @@ class Quote {
     buttonDelete.className = 'btn-danger';
     p.innerText = this.quote;
     footer.innerText = this.author;
-    buttonLike.innerText = 'Likes: ' 
+    buttonLike.innerText = 'Likes: ';
     span.innerText = this.likes.length;
     buttonLike.appendChild(span);
-    buttonDelete.innerText = 'Delete'
+    buttonDelete.innerText = 'Delete';
     blockquote.appendChild(p);
     blockquote.appendChild(footer);
     blockquote.appendChild(buttonLike);
@@ -56,7 +56,7 @@ class Quote {
         button.children[0].innerText = count;
       })
       .catch((err) => alert(err))
-    })
+    });
   }
 
   addDeleteListener(button, ul, li) {
@@ -66,6 +66,6 @@ class Quote {
       })
       .then(() => {ul.removeChild(li)})
       .catch((err) => alert(err));
-    })
+    });
   }
 }
